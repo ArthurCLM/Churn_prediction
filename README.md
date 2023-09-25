@@ -45,11 +45,81 @@ The technologies and tools used were Python (Pandas, Numpy, Matplotlib, Seaborn,
 
 # 5. Modelling
 
+- In this stage, my aim is to compare the performances of different models. To achieve this, I will employ stratified k-fold cross-validation to train each model and assess their ROC-AUC scores. Given the imbalanced nature of the target variable, accuracy is an unsuitable metric. Stratified k-fold cross-validation will address this issue by preserving the target class proportions in each fold.
+
+- K-fold cross-validation is a machine learning technique that assesses a model's performance by dividing the dataset into K subsets, using K-1 for training and one for testing in an iterative manner. This approach helps estimate a model's generalization ability, mitigating the risk of overfitting and providing more reliable performance metrics.
+
+- My goal here is to identify the best-performing model for subsequent hyperparameter tuning. To accomplish this, I will evaluate the models based on the highest average ROC-AUC validation scores and consider the trade-off between bias and variance.
+
+- Once a model is selected, I will proceed with hyperparameter tuning. Hyperparameter tuning involves the selection of optimal hyperparameters for a machine learning model. These hyperparameters are set before the model is trained and directly impact its performance but are not learned from the data
+
+![](Images/models_perfomance.png)
+
+The model's performance isn't in the best shape!
+
+- **Recall (0.51)**: The model correctly identifies 51% of churners. In practical terms, when we examine the confusion matrix, it accurately predicts 209 out of 407 attrited customers.
+
+- **Precision (0.77)**: Of all the customers predicted as churners, 77% of them indeed churn. In practical terms, according to the confusion matrix, out of 273 customers predicted as churners, 209 of them genuinely churn.
+
+- **ROC-AUC (0.87)**: With an impressive ROC-AUC score of 0.87, the model exhibits medium discriminative capability between attrited and existing customers."
+
+![](Images/final_model_metrics.png)
+
+While ensemble models like XGBoost are typically less interpretable, we were able to gain insights and validate the estimator's outcomes by delving into feature importances. This analysis corroborated the findings from the Exploratory Data Analysis (EDA) phase, reaffirming that certain features distinctly contribute to distinguishing between attrited and existing customers.
+
+![](Images/features_importance.png)
+
+
 # 6. Financial results
+
+- I've estimated a foundational financial projection to evaluate the project's viability. While I lacked access to specific financial data for precise calculations, it's common for credit card companies to generate revenue through fees on outstanding balances—referred to as the total revolving balance—carried by cardholders monthly. Accordingly, I assumed a standard 18% fee for the bank and conducted the estimation accordingly.
+
+- This calculation involved the difference between the gain from true positives (applying a 10% fee to outstanding balances as a retention strategy), the cost of retaining false positives (offering an 8% discount on outstanding balances), and the cost of false negatives churning (the complete 18% fee on outstanding balances that would have been collected). As a result, we arrived at an estimated gain of $4,089,987 !
+
+- However, it's important to emphasize that this is a preliminary estimate designed to illustrate the potential advantages of applying the model. The actual outcome will depend on how the bank strategically implements retention strategies based on predicted churn probabilities. For instance, if the bank adopts a more conservative approach to mitigate costs related to false positives, it may focus on clients with higher churn probabilities, thus affecting the financial outcome.
+
+- In conclusion, these excellent results demonstrate that our project has successfully achieved its objectives. The bank now has access to customer churn probabilities, empowering informed decision-making. This facilitates strategic retention efforts and effectively resolves the business problem at hand.
 
 # 7. How to apply the model in your machine
 
+**Prerequisites:**
+Before getting started, make sure you have the following installed on your machine:
+
+- **Python 3.11.4**
+- **pip (Python package manager)**
+- **Git (Version control tool)**
+Once you have this installed, open a terminal on your local machine and run the following commands:
+
+1. **Clone the repository**:
+```
+git clone https://github.com/allmeidaapedro/Churn_prediction.git
+```
+2. **Navigate to the cloned repository directory:**
+```
+cd Churn_prediction
+```
+3. **Create a virtual environment:**
+```
+python -m venv venv
+```
+4. **Activate the Virtual Environment:**
+Activate the virtual environment used to isolate the project dependencies.
+```
+source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
+```
+5. **Install Dependencies:**
+Use pip to install the required dependencies listed in the requirements.txt file.
+```
+pip install -r requirements.txt
+```
+6. **Run the Application:**
+```
+python application.py
+```
+
 # 8. Dataset link
+The dataset was collected from kaggle.
+Link: https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers
 
 
 
