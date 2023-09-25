@@ -119,6 +119,7 @@ python application.py
 
 # 8. Dataset link
 The dataset was collected from kaggle.
+
 Link: https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers
 
 
