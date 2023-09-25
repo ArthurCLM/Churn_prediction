@@ -92,7 +92,7 @@ Once you have this installed, open a terminal on your local machine and run the 
 
 1. **Clone the repository**:
 ```
-git clone https://github.com/allmeidaapedro/Churn_prediction.git
+git clone https://github.com/ArthurCLM/Churn_prediction.git
 ```
 2. **Navigate to the cloned repository directory:**
 ```
