@@ -80,44 +80,7 @@ While ensemble models like XGBoost are typically less interpretable, we were abl
 
 - In conclusion, these excellent results demonstrate that our project has successfully achieved its objectives. The bank now has access to customer churn probabilities, empowering informed decision-making. This facilitates strategic retention efforts and effectively resolves the business problem at hand.
 
-# 7. How to apply the model in your machine
-
-**Prerequisites:**
-Before getting started, make sure you have the following installed on your machine:
-
-- **Python 3.11.4**
-- **pip (Python package manager)**
-- **Git (Version control tool)**
-Once you have this installed, open a terminal on your local machine and run the following commands:
-
-1. **Clone the repository**:
-```
-git clone https://github.com/ArthurCLM/Churn_prediction.git
-```
-2. **Navigate to the cloned repository directory:**
-```
-cd Churn_prediction
-```
-3. **Create a virtual environment:**
-```
-python -m venv venv
-```
-4. **Activate the Virtual Environment:**
-Activate the virtual environment used to isolate the project dependencies.
-```
-source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
-```
-5. **Install Dependencies:**
-Use pip to install the required dependencies listed in the requirements.txt file.
-```
-pip install -r requirements.txt
-```
-6. **Run the Application:**
-```
-python application.py
-```
-
-# 8. Dataset link
+# 7. Dataset link
 The dataset was collected from kaggle.
 
 Link: https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers
