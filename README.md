@@ -13,7 +13,7 @@ We aim to accomplist the following for this study:
   - Preferably and based on model performance, choose a model that will attach a probability to the churn to make it easier for customer service to target low hanging fruits in their efforts to prevent churn
 
 # 3. Technologies and tools
-The technologies and tools used were Python (Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn, Category-Encoders, Scikit-Optimize, Xgboost), Jupyter Notebook, Git and Github (version control), machine learning classification algorithms, statistics, and Google Colab.
+The technologies and tools used were Python (Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn,  Scikit-Optimize, Xgboost), Jupyter Notebook, Git and Github (version control), machine learning classification algorithms, statistics, and Google Colab.
 
 # 4. Business Insights
 
